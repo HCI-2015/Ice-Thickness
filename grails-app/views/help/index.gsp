@@ -22,6 +22,7 @@
     <input type = "button" value="Map Locations" onclick="window.location.href=('/Ice-Thickness/map/')">
     <input type = "button" value="Settings" onclick="window.open('/Ice-Thickness/userProfile')">
     <input type = "button" value="help" onclick="window.open('/Ice-Thickness/help')">
+    <br>
 
   </div>
 </div>
