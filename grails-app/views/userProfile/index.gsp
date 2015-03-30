@@ -25,14 +25,21 @@
     Unit of Measure:
     <input type= "radio" name= "unit of measure" value= "standard"/> Standard
     <input type= "radio" name= "unit of measure" value= "metric"/> Metric <br/>
-
-    <input type= "submit" name= "done" value= "DONE">
+    <form>
+        <select id="selColor" name="selColor" multiple="true">
+        <option>   The Sample Recorded Data will be here          </option>
+        </select>
+    </form>
+        <input type= "submit" name= "done" value= "DONE">
 </form>
+
+
 
 </body>
 </html>
 <div>
     <input type = "button" value="Map Locations" onclick="window.location.href=('/Ice-Thickness/map/')">
+    <input type = "button" value="Submission" onclick="window.open('/Ice-Thickness/submission')">
     <input type = "button" value="Settings" onclick="window.open('/Ice-Thickness/userProfile')">
     <input type = "button" value="help" onclick="window.open('/Ice-Thickness/help')">
 

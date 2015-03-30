@@ -22,6 +22,7 @@
            onclick="document.form.action='http://www.google.com/';
            document.form.submit();"><br/>
     <input type= "submit" name= "ok" value= "OK">
+    <input type= "button" value= "Skip Registration" onclick="window.location.href=('/Ice-Thickness/map/')">
 </form>
 
 </body>
