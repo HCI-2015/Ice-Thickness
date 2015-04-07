@@ -7,10 +7,11 @@
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
+<asset:stylesheet href="myStyle.css"/>
 <body>
 <h1> Mapping ICE </h1>
 
-<form action= "userprofile.html" method= "post">
+<form method= "post">
     Email: <input type= "text" name= "username"/><br/>
     Password: <input type= "password" name= "password"><br/>
     <input type="button"
@@ -21,8 +22,8 @@
            value=" Forgot? "
            onclick="document.form.action='http://www.google.com/';
            document.form.submit();"><br/>
-    <input type= "submit" name= "ok" value= "OK">
-    <input type= "button" value= "Skip Registration" onclick="window.location.href=('/Ice-Thickness/map/')">
+    <input type= "submit" name= "ok" value= "OK" onclick="location.href='./help/guide1'">
+    <input type= "button" value= "Skip Registration" onclick="location.href='./help/guide1'">
 </form>
 
 </body>
