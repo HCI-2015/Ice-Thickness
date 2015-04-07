@@ -60,9 +60,9 @@
       <excludeFolder url="file://$MODULE_DIR$/target/work/stage" />
       <excludeFolder url="file://$MODULE_DIR$/target/work/tomcat" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.7" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="grails-2.4.4" level="application" />
+    <orderEntry type="library" exported="" name="grails-2.4.4" level="application" />
     <orderEntry type="module-library" exported="">
       <library name="Grails User Library (Ice-Thickness)">
         <CLASSES>
@@ -102,6 +102,6 @@
         <jarDirectory url="file://$MODULE_DIR$/lib" recursive="false" />
       </library>
     </orderEntry>
-    <orderEntry type="module" module-name="Ice-Thickness-grailsPlugins" />
+    <orderEntry type="module" module-name="Ice-Thickness-grailsPlugins" exported="" />
   </component>
 </module>
