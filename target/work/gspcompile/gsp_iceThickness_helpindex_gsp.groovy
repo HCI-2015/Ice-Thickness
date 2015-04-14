@@ -15,23 +15,17 @@ printHtmlPart(0)
 printHtmlPart(1)
 createTagBody(1, {->
 printHtmlPart(2)
-invokeTag('captureMeta','sitemesh',11,['gsp_sm_xmlClosingForEmptyTag':("/"),'name':("layout"),'content':("site")],-1)
-printHtmlPart(2)
-invokeTag('require','r',11,['modules':("bootstrap")],-1)
-printHtmlPart(2)
-createTagBody(2, {->
-createClosureForHtmlPart(3, 3)
-invokeTag('captureTitle','sitemesh',12,[:],3)
-})
-invokeTag('wrapTitleTag','sitemesh',13,[:],2)
-printHtmlPart(2)
-invokeTag('javascript','asset',13,['src':("geolocation.js")],-1)
+invokeTag('captureMeta','sitemesh',205,['gsp_sm_xmlClosingForEmptyTag':("/"),'name':("layout"),'content':("site")],-1)
+printHtmlPart(3)
+invokeTag('require','r',205,['modules':("bootstrap")],-1)
+printHtmlPart(3)
+invokeTag('javascript','asset',205,['src':("geolocation.js")],-1)
 printHtmlPart(4)
 })
-invokeTag('captureHead','sitemesh',13,[:],1)
+invokeTag('captureHead','sitemesh',206,[:],1)
 printHtmlPart(0)
 createClosureForHtmlPart(5, 1)
-invokeTag('captureBody','sitemesh',42,[:],1)
+invokeTag('captureBody','sitemesh',236,[:],1)
 printHtmlPart(6)
 }
 public static final Map JSP_TAGS = new HashMap()
@@ -39,7 +33,7 @@ protected void init() {
 	this.jspTags = JSP_TAGS
 }
 public static final String CONTENT_TYPE = 'text/html;charset=UTF-8'
-public static final long LAST_MODIFIED = 1428406409000L
+public static final long LAST_MODIFIED = 1428853228000L
 public static final String EXPRESSION_CODEC = 'html'
 public static final String STATIC_CODEC = 'none'
 public static final String OUT_CODEC = 'html'
