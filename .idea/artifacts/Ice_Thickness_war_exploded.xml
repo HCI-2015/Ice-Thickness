@@ -6,6 +6,10 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="Ice-Thickness" />
+          <element id="module-output" name="Ice-Thickness-grailsPlugins" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="Grails User Library (Ice-Thickness-grailsPlugins)" module-name="Ice-Thickness-grailsPlugins" />
         </element>
       </element>
     </root>
