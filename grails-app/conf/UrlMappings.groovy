@@ -7,8 +7,8 @@ class UrlMappings {
             }
         }
 
-        "/"(controller:"login")
-        "/controllerlist"(view:"controllerlist")
+        "/"(controller:"home")
         "500"(view:'/error')
+        "/controllerlist"(view:"controllerlist")
 	}
 }

@@ -117,3 +117,29 @@ log4j.main = {
 }
 grails.plugins.twitterbootstrap.fixtaglib = true
 grails.plugins.twitterbootstrap.defaultBundle = 'bundle_bootstrap'
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'cs4760progassign.UserOld'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'cs4760progassign.UserRole'
+grails.plugin.springsecurity.authority.className = 'cs4760progassign.Role'
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+	'/':                              ['permitAll'],
+	'/index':                         ['permitAll'],
+	'/controllerlist.gsp':                     ['permitAll'],
+	'/assets/**':                     ['permitAll'],
+	'/**/js/**':                      ['permitAll'],
+	'/**/css/**':                     ['permitAll'],
+	'/**/images/**':                  ['permitAll'],
+	'/**/favicon.ico':                ['permitAll'],
+    '/home/**': ['permitAll'],
+    '/book/index': ['permitAll'],
+    '/author/index': ['permitAll'],
+    '/user/**': ["ROLE_ADMIN"],
+    '/role/**': ["ROLE_ADMIN"],
+    '/registrationCode/**': ["ROLE_ADMIN"],
+    '/securityInfo/**': ["ROLE_ADMIN"],
+    '/controllerlist': ["ROLE_ADMIN"]
+]
+
+grails.plugin.springsecurity.logout.postOnly = false

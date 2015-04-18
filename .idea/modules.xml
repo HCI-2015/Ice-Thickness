@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Ice-Thickness.iml" filepath="$PROJECT_DIR$/Ice-Thickness.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Ice-Thickness-grailsPlugins.iml" filepath="$PROJECT_DIR$/Ice-Thickness-grailsPlugins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cs4760progassign.iml" filepath="$PROJECT_DIR$/cs4760progassign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cs4760progassign-grailsPlugins.iml" filepath="$PROJECT_DIR$/cs4760progassign-grailsPlugins.iml" />
     </modules>
   </component>
 </project>
