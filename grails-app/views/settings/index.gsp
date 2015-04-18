@@ -10,6 +10,7 @@
 <html>
 <head>
     <title></title>
+    <asset:stylesheet src="toggleButton.css"/>
     <asset:stylesheet src="myStyleRealone.css"/>
 </head>
 
@@ -23,9 +24,16 @@
 <center><h3>Settings</h3></center>
 <hr/>
 
-<center><input type = "button" class="myButton" onclick="location.href='./share/display'"   value="share my location      "></center>
-<center><input type = "button" class="myButton" onclick="location.href='/display/index.gsp'" value="display                "></center>
-<center><input type = "button" class="myButton" onclick="location.href='./userprofile'"    value="My Profile:           >"></center>
+<ul>
+    <li>
+        <label for='chkbx'>Share your location </label>
+        <div class='togglebox'>
+            <input type='checkbox' id='chkbx'>
+            <label for='chkbx'><b></b></label>
+        </div>
+    </li>
+</ul>
+<h3><center><input type = "button" class ="buttontext1" class="myButton" onclick="location.href='./userprofile'"    value="My Profile:           >"></center></h3>
 <ul id="topnav">
 
     <li id="topnav-1"><a href='/Ice-Thickness/submission' title="H">Map Location</a></li>
