@@ -10,7 +10,7 @@ class Measurement {
     double locationA
     double locationL
     String updateTime
-    String color
+    //String color
 
     static belongsTo = User
     User username
@@ -21,10 +21,11 @@ class Measurement {
         estimatedCovered(nullable: false)
         texture(nullable: false)
         accuracy(nullable: false)
-        additionInfor(nullable: false)
+        additionInfor(nullable: true)
         locationA(nullable: false)
         locationL(nullable: false)
-        updateTime(nullable: false)
+        updateTime(nullable: true)
+        username(nullable: true)
 //need to add constrain value of color
     }
     String toString(){}

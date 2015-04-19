@@ -32,15 +32,6 @@
 				</li>
 				</g:if>
 			
-				<g:if test="${measurementInstance?.photo}">
-				<li class="fieldcontain">
-					<span id="photo-label" class="property-label"><g:message code="measurement.photo.label" default="Photo" /></span>
-					
-						<span class="property-value" aria-labelledby="photo-label"><g:fieldValue bean="${measurementInstance}" field="photo"/></span>
-					
-				</li>
-				</g:if>
-			
 				<g:if test="${measurementInstance?.measurementData}">
 				<li class="fieldcontain">
 					<span id="measurementData-label" class="property-label"><g:message code="measurement.measurementData.label" default="Measurement Data" /></span>
@@ -82,15 +73,23 @@
 					<span id="additionInfor-label" class="property-label"><g:message code="measurement.additionInfor.label" default="Addition Infor" /></span>
 					
 						<span class="property-value" aria-labelledby="additionInfor-label"><g:fieldValue bean="${measurementInstance}" field="additionInfor"/></span>
+				</li>
+				</g:if>
+			
+				<g:if test="${measurementInstance?.locationA}">
+				<li class="fieldcontain">
+					<span id="locationA-label" class="property-label"><g:message code="measurement.locationA.label" default="Location A" /></span>
+					
+						<span class="property-value" aria-labelledby="locationA-label"><g:fieldValue bean="${measurementInstance}" field="locationA"/></span>
 					
 				</li>
 				</g:if>
 			
-				<g:if test="${measurementInstance?.location}">
+				<g:if test="${measurementInstance?.locationL}">
 				<li class="fieldcontain">
-					<span id="location-label" class="property-label"><g:message code="measurement.location.label" default="Location" /></span>
+					<span id="locationL-label" class="property-label"><g:message code="measurement.locationL.label" default="Location L" /></span>
 					
-						<span class="property-value" aria-labelledby="location-label"><g:fieldValue bean="${measurementInstance}" field="location"/></span>
+						<span class="property-value" aria-labelledby="locationL-label"><g:fieldValue bean="${measurementInstance}" field="locationL"/></span>
 					
 				</li>
 				</g:if>
@@ -100,24 +99,6 @@
 					<span id="updateTime-label" class="property-label"><g:message code="measurement.updateTime.label" default="Update Time" /></span>
 					
 						<span class="property-value" aria-labelledby="updateTime-label"><g:fieldValue bean="${measurementInstance}" field="updateTime"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${measurementInstance?.color}">
-				<li class="fieldcontain">
-					<span id="color-label" class="property-label"><g:message code="measurement.color.label" default="Color" /></span>
-					
-						<span class="property-value" aria-labelledby="color-label"><g:fieldValue bean="${measurementInstance}" field="color"/></span>
-					
-				</li>
-				</g:if>
-			
-				<g:if test="${measurementInstance?.measurementID}">
-				<li class="fieldcontain">
-					<span id="measurementID-label" class="property-label"><g:message code="measurement.measurementID.label" default="Measurement ID" /></span>
-					
-						<span class="property-value" aria-labelledby="measurementID-label"><g:fieldValue bean="${measurementInstance}" field="measurementID"/></span>
 					
 				</li>
 				</g:if>

@@ -1,5 +1,6 @@
 package ice.thickness
 
+import grails.converters.JSON
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -11,10 +12,13 @@ class MeasurementController {
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
-        respond Measurement.list(params), model: [measurementInstanceCount: Measurement.count()]
+        respond Measurement.list(params), model:[measurementInstanceCount: Measurement.count()]
     }
 
     def show(Measurement measurementInstance) {
+
+        def measurementJS = Measurement.list() as JSON
+        [measurementJS:measurementJS]
         respond measurementInstance
     }
 
@@ -30,16 +34,16 @@ class MeasurementController {
         }
 
         if (measurementInstance.hasErrors()) {
-            respond measurementInstance.errors, view: 'create'
+            respond measurementInstance.errors, view:'create'
             return
         }
 
-        measurementInstance.save flush: true
+        measurementInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'measurement.label', default: 'Measurement'), measurementInstance.id])
-                redirect measurementInstance
+                redirect (controller: "Userprofile", action: "index")
             }
             '*' { respond measurementInstance, [status: CREATED] }
         }
@@ -57,18 +61,18 @@ class MeasurementController {
         }
 
         if (measurementInstance.hasErrors()) {
-            respond measurementInstance.errors, view: 'edit'
+            respond measurementInstance.errors, view:'edit'
             return
         }
 
-        measurementInstance.save flush: true
+        measurementInstance.save flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Measurement.label', default: 'Measurement'), measurementInstance.id])
                 redirect measurementInstance
             }
-            '*' { respond measurementInstance, [status: OK] }
+            '*'{ respond measurementInstance, [status: OK] }
         }
     }
 
@@ -80,14 +84,14 @@ class MeasurementController {
             return
         }
 
-        measurementInstance.delete flush: true
+        measurementInstance.delete flush:true
 
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Measurement.label', default: 'Measurement'), measurementInstance.id])
-                redirect action: "index", method: "GET"
+                redirect action:"index", method:"GET"
             }
-            '*' { render status: NO_CONTENT }
+            '*'{ render status: NO_CONTENT }
         }
     }
 
@@ -97,7 +101,7 @@ class MeasurementController {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'measurement.label', default: 'Measurement'), params.id])
                 redirect action: "index", method: "GET"
             }
-            '*' { render status: NOT_FOUND }
+            '*'{ render status: NOT_FOUND }
         }
     }
 }

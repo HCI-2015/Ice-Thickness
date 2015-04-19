@@ -222,7 +222,7 @@
 <br/>
 <center><input type = "button" class="tb1" value="Edit Display:                                                                          >"></center>
 <br/>
-<center><input type = "button" class="tb1" onclick="location.href='./user'" value="My Profile:                                                                            >"></center>
+<center><input type = "button" class="tb1" onclick="location.href='./userprofile'" value="My Profile:                                                                            >"></center>
 <ul id="topnav">
 
     <li id="topnav-1"><a href='/Ice-Thickness/submission' title="H">Map Location</a></li>

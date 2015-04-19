@@ -11,15 +11,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'photo', 'error')} required">
-	<label for="photo">
-		<g:message code="measurement.photo.label" default="Photo" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="url" name="photo" required="" value="${measurementInstance?.photo}"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'measurementData', 'error')} required">
 	<label for="measurementData">
 		<g:message code="measurement.measurementData.label" default="Measurement Data" />
@@ -56,57 +47,48 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'additionInfor', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'additionInfor', 'error')} ">
 	<label for="additionInfor">
 		<g:message code="measurement.additionInfor.label" default="Addition Infor" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="additionInfor" required="" value="${measurementInstance?.additionInfor}"/>
+	<g:textField name="additionInfor" value="${measurementInstance?.additionInfor}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'location', 'error')} required">
-	<label for="location">
-		<g:message code="measurement.location.label" default="Location" />
+<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'locationA', 'error')} required">
+	<label for="locationA">
+		<g:message code="measurement.locationA.label" default="Location A" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="location" required="" value="${measurementInstance?.location}"/>
+	<g:field name="locationA" value="${fieldValue(bean: measurementInstance, field: 'locationA')}" required=""/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'updateTime', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'locationL', 'error')} required">
+	<label for="locationL">
+		<g:message code="measurement.locationL.label" default="Location L" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field name="locationL" value="${fieldValue(bean: measurementInstance, field: 'locationL')}" required=""/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'updateTime', 'error')} ">
 	<label for="updateTime">
 		<g:message code="measurement.updateTime.label" default="Update Time" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:textField name="updateTime" required="" value="${measurementInstance?.updateTime}"/>
+	<g:textField name="updateTime" value="${measurementInstance?.updateTime}"/>
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'color', 'error')} required">
-	<label for="color">
-		<g:message code="measurement.color.label" default="Color" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="color" required="" value="${measurementInstance?.color}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'measurementID', 'error')} required">
-	<label for="measurementID">
-		<g:message code="measurement.measurementID.label" default="Measurement ID" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="measurementID" required="" value="${measurementInstance?.measurementID}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'username', 'error')} required">
+<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'username', 'error')} ">
 	<label for="username">
 		<g:message code="measurement.username.label" default="Username" />
-		<span class="required-indicator">*</span>
+		
 	</label>
-	<g:select id="username" name="username.id" from="${ice.thickness.User.list()}" optionKey="id" required="" value="${measurementInstance?.username?.id}" class="many-to-one"/>
+	<g:select id="username" name="username.id" from="${ice.thickness.User.list()}" optionKey="id" value="${measurementInstance?.username?.id}" class="many-to-one" noSelection="['null': '']"/>
 
 </div>
 

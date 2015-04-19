@@ -26,8 +26,6 @@
 					
 						<g:sortableColumn property="measuringDevice" title="${message(code: 'measurement.measuringDevice.label', default: 'Measuring Device')}" />
 					
-						<g:sortableColumn property="photo" title="${message(code: 'measurement.photo.label', default: 'Photo')}" />
-					
 						<g:sortableColumn property="measurementData" title="${message(code: 'measurement.measurementData.label', default: 'Measurement Data')}" />
 					
 						<g:sortableColumn property="estimatedCovered" title="${message(code: 'measurement.estimatedCovered.label', default: 'Estimated Covered')}" />
@@ -35,6 +33,8 @@
 						<g:sortableColumn property="texture" title="${message(code: 'measurement.texture.label', default: 'Texture')}" />
 					
 						<g:sortableColumn property="accuracy" title="${message(code: 'measurement.accuracy.label', default: 'Accuracy')}" />
+					
+						<g:sortableColumn property="additionInfor" title="${message(code: 'measurement.additionInfor.label', default: 'Addition Infor')}" />
 					
 					</tr>
 				</thead>
@@ -44,8 +44,6 @@
 					
 						<td><g:link action="show" id="${measurementInstance.id}">${fieldValue(bean: measurementInstance, field: "measuringDevice")}</g:link></td>
 					
-						<td>${fieldValue(bean: measurementInstance, field: "photo")}</td>
-					
 						<td>${fieldValue(bean: measurementInstance, field: "measurementData")}</td>
 					
 						<td>${fieldValue(bean: measurementInstance, field: "estimatedCovered")}</td>
@@ -53,6 +51,8 @@
 						<td>${fieldValue(bean: measurementInstance, field: "texture")}</td>
 					
 						<td>${fieldValue(bean: measurementInstance, field: "accuracy")}</td>
+					
+						<td>${fieldValue(bean: measurementInstance, field: "additionInfor")}</td>
 					
 					</tr>
 				</g:each>
