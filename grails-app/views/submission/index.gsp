@@ -231,7 +231,7 @@
   <script>geoFindMe()</script>
   <br/>
   <g:form controller="measurement" action="save">
-    <g:textField class="tb1" id="lat" name="locationA" size="4" value="33"/><g:textField class="tb1" id="long" name="locationL" size="4" value="32"/>
+    <g:textField class="tb1" id="lat" name="locationA" size="4"/><g:textField class="tb1" id="long" name="locationL" size="4"/>
     <br/>
     <g:img uri="http://i.imgur.com/H73RWPB.jpg"/>
     <br/>
