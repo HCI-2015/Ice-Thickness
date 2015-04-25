@@ -16,7 +16,8 @@ function geoFindMe() {
         var latitude = position.coords.latitude;
         var longitude = position.coords.longitude;
 
-
+        document.getElementById('lat').value = latitude;
+        document.getElementById('long').value = longitude;
         //outputLatLong.innerHTML = '<p>Latitude is ' + latitude + '° <br>Longitude is ' + longitude + '°</p>';
 
         // map image
@@ -32,39 +33,44 @@ function geoFindMe() {
             center: coordinates,
             zoom: 8
         };
-
-
-
-
         var map = new google.maps.Map(outputMap, mapOptions);
 
+        var marker = new google.maps.Marker({
+            map:map,
+            position:coordinates,
+            draggable: false,
+            animation: google.maps.Animation.DROP
+        });
         //Add listener
         google.maps.event.addListener(map, "click", function (event) {
-             latitude = event.latLng.lat();
+
+            //Delete previous marker when click on the map
+            marker.setMap(null);
+
+            latitude = event.latLng.lat();
              longitude = event.latLng.lng();
+
             document.getElementById('lat').value = latitude;
             document.getElementById('long').value = longitude;
             console.log( latitude + ', ' + longitude );
-            placeMarker(event.latlng)
-        }); //end addListener
-        function placeMarker(location) {
-            var marker = new google.maps.Marker({
-                position: location,
-                map: map
-            });
-        }
-        // Set up and display the Marker
-        var markerOptions = {
-            map: map,
-            position: coordinates,
-            draggable: false,
-            animation: google.maps.Animation.DROP
-        };
 
 
-        var marker = new google.maps.Marker(markerOptions);
+
+            var placeMarker = function (location) {
 
 
+              marker = new google.maps.Marker({
+                    position: location,
+                    draggable: false,
+                    animation: google.maps.Animation.DROP
+
+                });
+
+                marker.setMap(map);
+            };
+            placeMarker(event.latLng);
+
+        });//end addListener
 
 
 
