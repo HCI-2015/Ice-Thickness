@@ -218,9 +218,12 @@
 <div id="map-canvas" style="width:500px; height:400px"></div>
 
 <g:each in="${measurement}">
-    <p>${it}</p>
-    <script>showMeasurement()</script>
+    <script type="text/javascript">var data="${it.thick}";</script>
+    <script type="text/javascript">var latitude="${it.location.latitude}";</script>
+    <script type="text/javascript">var longtitude="${it.location.longtitude}";</script>
+    <script type="text/javascript">showMeasurement(data,latitude,longtitude);</script>
 </g:each>
+
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 
 
