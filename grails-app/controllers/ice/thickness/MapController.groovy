@@ -10,15 +10,17 @@ class MapController {
         for (int i=0;i<measurement.size();i++){
             def location = [:]
             location.put("latitude",measurement[i].locationA)
-            location.put("longtidude",measurement[i].locationL)
+            location.put("longtitude",measurement[i].locationL)
 
             def thick = [:]
             thick.put("thick",measurement[i].measurementData)
             thick.put("location",location)
 
-            list << thick
-        }
 
+            list << thick
+
+        }
+        def listJ = list as JSON
         [measurement :list]
 
     }
