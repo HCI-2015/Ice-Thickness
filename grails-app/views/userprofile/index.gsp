@@ -234,15 +234,18 @@
     <label>Measuring Device:</label>
     <g:select name="measuringDevice" from="${['Tape Measure', 'Ice Chisel','Ice Auger']}"/>
     <br/>
-    <g:radio name="unitOfMeasure" value="Standard"/>Standard
-    <g:radio name="unitOfMeasure" value="Metric"/>Metric<br/>
+
     <div style="width:400px;height:300px;line-height:1em;overflow:scroll;padding:5px;border:4px double #aaaaaa;">
         <g:each in="${profiles}" var="profile" status="i">
-            <div>${i+1}latitude: ${profile.locationA} </br>longtitude:
+            <div>${i+1}. latitude: ${profile.locationA} </br>longtitude:
             ${profile.locationL},</br>Thickness ${profile.measurementData}</br>
-            EstimatedCovered: ${profile.estimatedCovered}%
+            Unit: ${profile.measurementUnit} </br>
+            Texture: ${profile.texture} </br>
+            EstimatedCovered: ${profile.estimatedCovered}% </br>
+            Update Time:${profile.updateTime} </br>
+            <input type = "button" class="tb1" onclick="location.href='/Ice-Thickness/measurement/edit/${profile.id}'" value="Edit"/>
             </br>
-        </div>
+            </div>
             <hr/>
         </g:each>
 

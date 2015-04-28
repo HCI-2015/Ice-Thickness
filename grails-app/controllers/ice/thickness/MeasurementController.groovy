@@ -1,6 +1,6 @@
 package ice.thickness
 
-import grails.converters.JSON
+
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -16,9 +16,6 @@ class MeasurementController {
     }
 
     def show(Measurement measurementInstance) {
-
-        def measurementJS = Measurement.list() as JSON
-        [measurementJS:measurementJS]
         respond measurementInstance
     }
 
@@ -39,6 +36,7 @@ class MeasurementController {
         }
 
         measurementInstance.save flush:true
+        measurementInstance.updateTime = new Date()
 
         request.withFormat {
             form multipartForm {
@@ -70,7 +68,7 @@ class MeasurementController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.updated.message', args: [message(code: 'Measurement.label', default: 'Measurement'), measurementInstance.id])
-                redirect measurementInstance
+                redirect (controller: "Userprofile", action: "index")
             }
             '*'{ respond measurementInstance, [status: OK] }
         }
@@ -89,7 +87,7 @@ class MeasurementController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.deleted.message', args: [message(code: 'Measurement.label', default: 'Measurement'), measurementInstance.id])
-                redirect action:"index", method:"GET"
+                redirect (controller: "Userprofile", action: "index")
             }
             '*'{ render status: NO_CONTENT }
         }

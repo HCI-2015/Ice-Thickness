@@ -20,6 +20,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'measurementUnit', 'error')} required">
+	<label for="measurementUnit">
+		<g:message code="measurement.measurementUnit.label" default="Measurement Unit" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="measurementUnit" required="" value="${measurementInstance?.measurementUnit}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'estimatedCovered', 'error')} required">
 	<label for="estimatedCovered">
 		<g:message code="measurement.estimatedCovered.label" default="Estimated Covered" />
@@ -74,12 +83,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'updateTime', 'error')} ">
+<div class="fieldcontain ${hasErrors(bean: measurementInstance, field: 'updateTime', 'error')} required">
 	<label for="updateTime">
 		<g:message code="measurement.updateTime.label" default="Update Time" />
-		
+		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="updateTime" value="${measurementInstance?.updateTime}"/>
+	<g:datePicker name="updateTime" precision="day"  value="${measurementInstance?.updateTime}"  />
 
 </div>
 

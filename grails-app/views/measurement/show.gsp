@@ -41,6 +41,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${measurementInstance?.measurementUnit}">
+				<li class="fieldcontain">
+					<span id="measurementUnit-label" class="property-label"><g:message code="measurement.measurementUnit.label" default="Measurement Unit" /></span>
+					
+						<span class="property-value" aria-labelledby="measurementUnit-label"><g:fieldValue bean="${measurementInstance}" field="measurementUnit"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${measurementInstance?.estimatedCovered}">
 				<li class="fieldcontain">
 					<span id="estimatedCovered-label" class="property-label"><g:message code="measurement.estimatedCovered.label" default="Estimated Covered" /></span>
@@ -73,6 +82,7 @@
 					<span id="additionInfor-label" class="property-label"><g:message code="measurement.additionInfor.label" default="Addition Infor" /></span>
 					
 						<span class="property-value" aria-labelledby="additionInfor-label"><g:fieldValue bean="${measurementInstance}" field="additionInfor"/></span>
+					
 				</li>
 				</g:if>
 			
@@ -98,7 +108,7 @@
 				<li class="fieldcontain">
 					<span id="updateTime-label" class="property-label"><g:message code="measurement.updateTime.label" default="Update Time" /></span>
 					
-						<span class="property-value" aria-labelledby="updateTime-label"><g:fieldValue bean="${measurementInstance}" field="updateTime"/></span>
+						<span class="property-value" aria-labelledby="updateTime-label"><g:formatDate date="${measurementInstance?.updateTime}" /></span>
 					
 				</li>
 				</g:if>

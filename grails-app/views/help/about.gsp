@@ -1,11 +1,12 @@
 <%--
   Created by IntelliJ IDEA.
-  User: apple
-  Date: 3/25/15
-  Time: 9:51 AM
+  User: Mitch
+  Date: 4/20/2015
+  Time: 1:44 PM
 --%>
+
 <%@ page contentType="text/html;charset=UTF-8" %>
-<>
+<html>
 <head>
     <style>
     body{
@@ -60,6 +61,19 @@
         background:url(http://i.imgur.com/4bCaJLv.jpg) no-repeat 0 0; /* X and Y position at 0 */
         height:71px;
     }
+    ul#topnav li#topnav-1a a {
+        width:106px;
+        height:71px;
+        background:url(http://i.imgur.com/4bCaJLv.jpg) no-repeat 0 0; /* X and Y position at 0 */
+    }
+    ul#topnav  li#topnav-1a a:hover {
+        background:url(http://i.imgur.com/4bCaJLv.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+    }
+    ul#topnav  li#topnav-1a a.current {
+        background:url(http://i.imgur.com/4bCaJLv.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+    }
     ul#topnav li#topnav-2 a {
         width:106px;
         height:71px;
@@ -76,6 +90,22 @@
         filter: brightness(1.2) grayscale(.5) opacity(.9);
     }
     ul#topnav  li#topnav-2 a.current {
+        background:url(http://i.imgur.com/2pTZx6x.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+    }
+
+    ul#topnav li#topnav-2a a {
+        width:106px;
+        height:71px;
+        background:url(http://i.imgur.com/2pTZx6x.jpg) no-repeat 0 0; /* X and Y position at 0 */
+
+    }
+    ul#topnav  li#topnav-2a a:hover {
+        background:url(http://i.imgur.com/2pTZx6x.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+
+    }
+    ul#topnav  li#topnav-2a a.current {
         background:url(http://i.imgur.com/2pTZx6x.jpg) no-repeat 0 0; /* X and Y position at 0 */
         height:71px;
     }
@@ -98,6 +128,23 @@
         background:url(http://i.imgur.com/cGwKeQ9.jpg) no-repeat 0 0; /* X and Y position at 0 */
         height:71px;
     }
+
+    ul#topnav li#topnav-3a a {
+        width:106px;
+        background:url(http://i.imgur.com/cGwKeQ9.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+
+    }
+    ul#topnav  li#topnav-3a a:hover {
+        background:url(http://i.imgur.com/cGwKeQ9.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+
+    }
+    ul#topnav  li#topnav-3a a.current {
+        background:url(http://i.imgur.com/cGwKeQ9.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+    }
+
     ul#topnav li#topnav-4 a {
         width:106px;
         background:url(http://i.imgur.com/AdvuIDa.jpg) no-repeat 0 0; /* X and Y position at 0 */
@@ -117,6 +164,21 @@
         background:url(http://i.imgur.com/AdvuIDa.jpg) no-repeat 0 0; /* X and Y position at 0 */
         height:71px;
     }
+
+    ul#topnav li#topnav-4a a {
+        width:106px;
+        background:url(http://i.imgur.com/AdvuIDa.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+
+    }
+    ul#topnav  li#topnav-4a a:hover {
+        background:url(http://i.imgur.com/AdvuIDa.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+    }
+    ul#topnav  li#topnav-4a a.current {
+        background:url(http://i.imgur.com/AdvuIDa.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+    }
     ul#topnav li#topnav-5 a {
         width:106px;
         background:url(http://i.imgur.com/CbwiLdj.jpg) no-repeat 0 0; /* X and Y position at 0 */
@@ -133,6 +195,22 @@
         filter: brightness(1.2) grayscale(.5) opacity(.9);
     }
     ul#topnav  li#topnav-5 a.current {
+        background:url(http://i.imgur.com/CbwiLdj.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+    }
+
+    ul#topnav li#topnav-5a a {
+        width:106px;
+        background:url(http://i.imgur.com/CbwiLdj.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+
+    }
+    ul#topnav  li#topnav-5a a:hover {
+        background:url(http://i.imgur.com/CbwiLdj.jpg) no-repeat 0 0; /* X and Y position at 0 */
+        height:71px;
+
+    }
+    ul#topnav  li#topnav-5a a.current {
         background:url(http://i.imgur.com/CbwiLdj.jpg) no-repeat 0 0; /* X and Y position at 0 */
         height:71px;
     }
@@ -201,45 +279,19 @@
         color: black;
     }
     </style>
-    <asset:javascript src="mapView.js"/>
     <meta name="layout" content="site"/>
-    <title>Mapping Ice</title>
+    <r:require modules="bootstrap"/>
+    <asset:javascript src="geoloc.js"/>
 </head>
+
+<body>
 <div class="jumbotron jumb-margin">
-    <div class="container">
-        <h2 class="text-center">Mapping Ice</h2>
+    <div class="container" height="150">
+        <h2 class="text-center">Mapping ICE</h2>
     </div>
+
 </div>
-
-<g:select action="show" name="ice-thickness" controller="measurement" from="${['above 8','above 6','above 4','above 2']}">
-</g:select>
-
-<div id="latlong-out"></div>
-<div id="map-canvas" style="width:500px; height:400px"></div>
-
-<g:each in="${measurement}">
-    <g:if test="${it.thick}">
-        <script type="text/javascript">var data="${it.thick}";</script>
-        <script type="text/javascript">var latitude="${it.location.latitude}";</script>
-        <script type="text/javascript">var longtitude="${it.location.longtitude}";</script>
-    </g:if>
-    <script type="text/javascript">showMeasurement(data,latitude,longtitude);</script>
-</g:each>
-
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
-
-
-<!-- Simple get location -->
-
-
 <br/>
-<ul id="topnav">
-
-    <li id="topnav-1"><a href='/Ice-Thickness/submission' title="H">Map Location</a></li>
-    <li id="topnav-3"><a href='/Ice-Thickness/map' title="About Us">Submission</a></li>
-    <li id="topnav-4"><a href='/Ice-Thickness/settings' title="Contact Us">Setting</a></li>
-    <li id="topnav-5"><a href='/Ice-Thickness/help' title="Contact ">Help</a></li>
-</ul>
+<g:image uri=http://i.imgur.com/JDfHFvN.jpg"></g:image>
 </body>
-
 </html>

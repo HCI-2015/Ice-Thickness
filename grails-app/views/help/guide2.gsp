@@ -236,3 +236,4 @@
 
 <p align="right"><input type = "button" class="tb1" value="Next" onclick="location.href='../map'">&nbsp;</p>
 </body>
+</html>

@@ -28,13 +28,13 @@
 					
 						<g:sortableColumn property="measurementData" title="${message(code: 'measurement.measurementData.label', default: 'Measurement Data')}" />
 					
+						<g:sortableColumn property="measurementUnit" title="${message(code: 'measurement.measurementUnit.label', default: 'Measurement Unit')}" />
+					
 						<g:sortableColumn property="estimatedCovered" title="${message(code: 'measurement.estimatedCovered.label', default: 'Estimated Covered')}" />
 					
 						<g:sortableColumn property="texture" title="${message(code: 'measurement.texture.label', default: 'Texture')}" />
 					
 						<g:sortableColumn property="accuracy" title="${message(code: 'measurement.accuracy.label', default: 'Accuracy')}" />
-					
-						<g:sortableColumn property="additionInfor" title="${message(code: 'measurement.additionInfor.label', default: 'Addition Infor')}" />
 					
 					</tr>
 				</thead>
@@ -46,13 +46,13 @@
 					
 						<td>${fieldValue(bean: measurementInstance, field: "measurementData")}</td>
 					
+						<td>${fieldValue(bean: measurementInstance, field: "measurementUnit")}</td>
+					
 						<td>${fieldValue(bean: measurementInstance, field: "estimatedCovered")}</td>
 					
 						<td>${fieldValue(bean: measurementInstance, field: "texture")}</td>
 					
 						<td>${fieldValue(bean: measurementInstance, field: "accuracy")}</td>
-					
-						<td>${fieldValue(bean: measurementInstance, field: "additionInfor")}</td>
 					
 					</tr>
 				</g:each>

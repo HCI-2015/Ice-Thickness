@@ -217,15 +217,20 @@
 <center><h3>Settings</h3></center>
 <hr/>
 
-<center><input type = "button" class="tb1" value="FAQ                                       >"></center>
+<input type = "button" class="tb1" value="FAQ                                                                                                    >">
 <br/>
-<center><input type = "button" class="tb1" onclick="location.href='./help/guide1'" value="Measurement Guide:                                                                          >"></center>
 <br/>
-<center><input type = "button" class="tb1" value="Contact Form                                                                            >"></center>
+<input type = "button" class="tb1" onclick="location.href='./help/guide1'" value="Measurement Guide:                                                                          >">
 <br/>
-<center><input type = "button" class="tb1" value="About the project                                       >"></center>
 <br/>
-<center><input type = "button" class="tb1" value="Additional Resources                                                                          >"></center>
+<input type = "button" class="tb1" value="Contact Form                                                                                      >">
+<br/>
+<br/>
+<input type = "button" class="tb1" onclick="location.href='./help/about'" value="About the project                                                                                 >">
+<br/>
+<br/>
+<input type = "button" class="tb1" value="Additional Resources                                                                           >">
+<br/>
 <br/>
 
 <ul id="topnav">

@@ -215,14 +215,15 @@
     </div>
 
 </div>
-<center><h3>Settings</h3></center>
+<h3>Settings</h3>
 <hr/>
 
-<center><input type = "button" class="tb1" value="Edit Sharing/Location Settings:                                            >"></center>
+<input type = "button" class="tb1" value="Edit Sharing/Location Settings:                                            >">
 <br/>
-<center><input type = "button" class="tb1" value="Edit Display:                                                                          >"></center>
 <br/>
-<center><input type = "button" class="tb1" onclick="location.href='./userprofile'" value="My Profile:                                                                            >"></center>
+<input type = "button" class="tb1" onclick="location.href='./userprofile'" value="My Profile:                                                                            >">
+<br/>
+<br/>
 <ul id="topnav">
 
     <li id="topnav-1"><a href='/Ice-Thickness/submission' title="H">Map Location</a></li>
